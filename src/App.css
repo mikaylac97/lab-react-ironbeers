@@ -61,3 +61,23 @@
 .home img {
   width: 100vw;
 }
+
+/*  ALL BEERS STYLES  */
+
+.beer-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  border-bottom: 1px solid lightgray;
+  padding: 40px 10px;
+}
+
+.beer-img img{
+  width: 5vw;
+  margin: 0px 50px;
+}
+
+.beer-info {
+  text-align: left;
+}
