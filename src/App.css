@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/*  HOME COMPONENT STYLES  */
+
+.home div {
+  border: 1px solid lightgray;
+}
+
+.home h1, p {
+  text-align: left;
+  margin: 10px 30px 20px 30px;
+}
+
+.home h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.home p {
+  color: gray;
+  font-size: 20px;
+}
+
+.home img {
+  width: 100vw;
+}
