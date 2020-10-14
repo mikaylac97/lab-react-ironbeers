@@ -9,6 +9,7 @@ export default class AllBeers extends Component {
     
         this.state = {
              allBeers: [],
+             search: ''
         }
     }
 
@@ -22,11 +23,27 @@ export default class AllBeers extends Component {
           .catch((err) => console.log(err));
       }
 
+    handleSearch = async (event) => {
+       await this.setState({
+           search: event.target.value.toLowerCase()
+       })
+       IronBeersAPI
+            .searchBeer(this.state.search)
+            .then(query => {
+                console.log({search: query.data})
+                this.setState({
+                    allBeers: query.data
+                })
+            })
+            .catch(err => console.log(err))
+    }
+
     
     render() {
         return (
             <div>
                 <Header />
+                <input placeholder='Search beers' type='text' onChange={this.handleSearch}></input>
                 {this.state.allBeers.map(beer => (
                     <Link key={beer._id} to={`/beers/${beer._id}`}>
                         <div className='beer-box'>
