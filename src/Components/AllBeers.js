@@ -28,7 +28,7 @@ export default class AllBeers extends Component {
             <div>
                 <Header />
                 {this.state.allBeers.map(beer => (
-                    <Link key={beer._id} to={`/single-beer/${beer._id}`}>
+                    <Link key={beer._id} to={`/beers/${beer._id}`}>
                         <div className='beer-box'>
                             <div className='beer-img'>
                                 <img src={beer.image_url} alt='beer' />

@@ -81,3 +81,24 @@
 .beer-info {
   text-align: left;
 }
+
+/*  SINGLE BEER STYLES  */
+
+.single-beer {
+  margin: 30px 10px;
+}
+
+.single-beer img {
+  width: 12vw;
+}
+
+.single-beer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 30px;
+}
+
+.single-beer p {
+  text-align: left;
+}
