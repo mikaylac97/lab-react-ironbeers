@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import IronBeersAPI from '../api/IronBeersAPI'
 // import { Link } from 'react-router-dom'
 import Header from './Header'
-const axios = require('axios')
+// const axios = require('axios')
 
 export default class SingleBeer extends Component {
     
@@ -11,14 +12,12 @@ export default class SingleBeer extends Component {
 
         componentDidMount = () => {
             const beerId = this.props.match.params.id ? `${this.props.match.params.id}` : 'random'
-            axios
-                .get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
-                .then(response => {
-                    this.setState({
-                        clickedBeer: response.data
-                    })
-                })
-                .catch(err => console.log(err))
+            IronBeersAPI
+                .getSingleBeer(beerId)
+                .then((apiResponse) => this.setState({
+                    clickedBeer: apiResponse.data
+                }))
+                .catch((err) => console.log(err))
         }
 
     

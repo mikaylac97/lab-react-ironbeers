@@ -16,8 +16,8 @@ export default {
     getRandomBeer() {
         return service.get('/random')
     },
-    getNewBeer(){
-        return service.get('/new')
+    createNewBeer(data){
+        return service.post('/new', data)
     },
     searchBeer(query){
         return service.get(`/search?q=${query}`)

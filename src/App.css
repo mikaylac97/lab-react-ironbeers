@@ -102,3 +102,35 @@
 .single-beer p {
   text-align: left;
 }
+
+/*  NEW BEER FORM STYLES  */
+
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-beer-form label {
+  font-weight: 700;
+  margin: 20px 0px;
+  text-align: left;
+}
+
+.new-beer-form input {
+  width: 550px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+.new-beer-form button {
+  width: 550px;
+  background-color: #3DC4FC;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
